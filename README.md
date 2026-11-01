@@ -7,4 +7,4 @@ I had to do some changes on the websites, where i changes the navigation of the 
 The images below show the different ways the websites appear on different size screens. 
 <img width="1920" height="1020" alt="screenshot-laptop" src="https://github.com/user-attachments/assets/1c52a7b8-c664-4810-aa9e-2aeeb272d0c2" />
 <img width="739" height="1600" alt="phone" src="https://github.com/user-attachments/assets/c97f5486-1fb4-4871-81b5-324073d57ed0" />
-
+I have added javascript to my website and have added a few things. I added navigation at the bottom of the pages as well as a new page which is Donation so people can fill it in and donate what they can. 
