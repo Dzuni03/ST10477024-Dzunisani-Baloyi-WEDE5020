@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap:  https://dzuni03.github.io/ST10477024-Dzunisani-Baloyi-WEDE5020//sitemap.xml

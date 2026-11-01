@@ -2,11 +2,12 @@
 <html>
 
 <head>
-    <title>Get involved</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Get Involved</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description"
+        content="Explore SHOUT SA's literacy projects, school library initiatives and opportunities to support children's reading.">
 </head>
 
-<!-- NAVIGATION -->
 <nav style="text-align: center;">
 
     <a href="index.html">
@@ -33,39 +34,121 @@
 
     <body style="background-color: yellow;
 text-align: center">
-        <form>
-            <label>Name:</label>
-            <input type="text">
+
+        <form id="enquiriesForm" action="https://formsubmit.co/gavin@shoutsa.com" method="POST">
+
+            <label for="enquiry-name">Name:</label>
+            <input type="text" id="enquiry-name" name="name" minlength="2" maxlength="50" required>
             <br><br>
-            <label>Surname:</label>
-            <input type="text">
+            <label for="enquiry-surname">Surname:</label>
+            <input type="text" id="enquiry-surname" name="surname" minlength="2" maxlength="50" required>
             <br><br>
-            <label>Email:</label>
-            <input type="email">
+            <label for="enquiry-email">Email:</label>
+            <input type="email" id="enquiry-email" name="email" required>
             <br><br>
-            <label>Phone number:</label>
-            <input type="tel">
+            <label for="enquiry-phone">Phone Number:</label>
+            <input type="tel" id="enquiry-phone" name="phone" pattern="[0-9 +()-]{7,20}"
+                title="Enter a phone number using 7 to 20 permitted characters." required>
             <br><br>
-            <label>I'm interested in:</label>
-            <br>
-            <input type="radio" name="interest">
-            Volunteering
-            <br>
-            <input type="radio" name="interest">
-            Becoming a sponsor
-            <br>
-            <input type="radio" name="interest">
-            Donating
-            <br>
-            <input type="radio" name="interest">
-            Other
-            <br>
-            <input type="submit" value="Send">
+            <label for="enquiry-subject">Select Subject:</label>
+            <select id="enquiry-subject" name="subject" required>
+                <option value="">Choose a subject</option>
+                <option value="Literacy Projects">Literacy Projects</option>
+                <option value="Volunteering">Volunteering</option>
+                <option value="Donations">Donations</option>
+                <option value="Sponsorship">Sponsorship</option>
+                <option value="General Enquiry">General Enquiry</option>
+            </select>
+            <br><br>
+            <button type="submit">Send</button>
+
         </form>
-        <!--Footer-->
+
+        <section id="help-accordion">
+            <h3>How You Can Help SHOUT SA</h3>
+
+            <div class="accordion-item">
+                <button class="accordion-button" onclick="toggleAccordion('books-info')" aria-expanded="false"
+                    aria-controls="books-info">
+                    Donate Books
+                </button>
+
+                <div id="books-info" hidden>
+                    <p>Donating books can help children access reading
+                        materials and develop their literacy skills.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-button" onclick="toggleAccordion('volunteer-info')" aria-expanded="false"
+                    aria-controls="volunteer-info">
+                    Volunteer
+                </button>
+
+                <div id="volunteer-info" hidden>
+                    <p>Volunteers can contribute their time to support
+                        literacy initiatives and school communities.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-button" onclick="toggleAccordion('donation-info')" aria-expanded="false"
+                    aria-controls="donation-info">
+                    Make a Donation
+                </button>
+
+                <div id="donation-info" hidden>
+                    <p>Financial contributions can support educational
+                        resources and literacy programmes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="shout gallery">
+            <h3>Behind the scenes of SHOUT SA</h3>
+
+            <div class="gallery container">
+                <img src="lightbox.1.jpg" alt="Owners with school child" class="gallery-image">
+
+                <img src="lightbox.2.jpeg" alt="SHOUT SA owners" class="gallery-image">
+
+                <img src="lightbox.3.jpeg" alt="A library SHOUT SA opened" class="gallery-image">
+
+                <img src="lightbox.4.jpeg" alt="SHOUT SA banner" class="gallery-image">
+            </div>
+        </section>
+
+        <div id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image viewer" hidden>
+            <button id="close-lightbox" type="button" aria-label="Close enlarged image">&times;</button>
+
+            <img id="lightbox-image" src="" alt="">
+            <p id="lightbox-caption"></p>
+        </div>
+
+
+        </div>
+
         <footer style="color: red;">our sponsors are:<br>
             <p style="word-spacing: 30px;"> Makro Effectus HSDesign it'sme </p>
+
+            <br>
+            Quick links
+            <br>
+            <a href="index.html">Home</a>
+            <br>
+            <a href="about.html">About Us</a>
+            <br>
+            <a href="services.html">Our Work</a>
+            <br>
+            <a href="enquiries.html">Get Involved</a>
+            <br>
+            <a href="contact.html">Contact</a>
+
+            <p>&copy; SHOUT SA. All rights reserved.</p>
+
         </footer>
+
+        <script src="script.js/javascript.js"></script>
     </body>
 
 </html>

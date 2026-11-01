@@ -3,10 +3,11 @@
 
 <head>
     <title>Contact</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description"
+        content="Contact SHOUT SA to learn more about our literacy projects, volunteering opportunities and ways to support education.">
 </head>
 
-<!-- NAVIGATION -->
 <nav style="text-align: center;">
 
     <a href="index.html">
@@ -30,14 +31,13 @@
     </a>
 
 </nav>
-<main>
 
+<main>
 
     <body style="margin: 0;
 background-color: yellow;
 font-family: sans-serif">
 
-        <!--Contact Information-->
         <div style="width: 65%;
 height: 380px;
 margin: 0;
@@ -48,10 +48,8 @@ padding-top: 110px">
             <picture>
                 <source media="(min-width: 480px)" srcset="background-small.jpg">
                 <source media="(max-width: 1200px)" srcset="background-large.jpg">
-                <img src="background.jpeg" alt="shout picture" align="right">
+                <img src="background.jpeg" alt="shout picture" align="right" loading="lazy">
             </picture>
-
-            <!-- Heading -->
 
             <body>
                 <p>
@@ -59,7 +57,6 @@ padding-top: 110px">
                 </p>
             </body>
 
-            <!-- Contact details -->
             <div style="
 margin: 0;
 font-size: 22px;
@@ -86,47 +83,78 @@ color: white">
             </div>
         </div>
         </div>
-        <!--Map-->
-        <h2 style="color: black; margin-left: 8%">
-            Map:
-        </h2>
-
-        <iframe src="https://www.google.com/maps/embed?pb=<iframe src="
-            https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14328.852012192852!2d28.02866815096887!3d-26.124597084007696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950cb70efaac55%3A0x52b3b855fed7cda!2sHyde%20Park%2C%20Sandton%2C%202196!5e0!3m2!1sen!2sza!4v1786710448084!5m2!1sen!2sza"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"></iframe>
-
-
-        <!--Contact Form-->
 
         <body>
             <p>
             <h2>Contact Form</h2>
             </p>
         </body>
-        <form>
-            Name:
-            <input type="text">
+
+        <form id="contactForm" action="https://formsubmit.co/gavin@shoutsa.com" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" minlength="2" maxlength="50" required>
             <br><br>
-            Surname:
-            <input type="text">
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" minlength="2" maxlength="50" required>
             <br><br>
-            Email:
-            <input type="email">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9 +()-]{7,20}" title="Enter a valid phone number."
+                required>
             <br><br>
-            Subject:
-            <input type="text">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
             <br><br>
-            Message:
-            <textarea></textarea>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" minlength="3" maxlength="100" required>
             <br><br>
-            <input type="submit" value="Send">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" minlength="10" maxlength="2000" rows="5" required></textarea>
+            <br><br>
+            <p id="form-error" role="alert"></p>
+            <p id="form-status" role="status" aria-live="polite"></p>
+
+            <button type="submit">Send</button>
         </form>
+
+        <h2 style="color: black; margin-left: 8%">
+            Map:
+        </h2>
+
+        <section id="location-map">
+            <h3>Find Us on the Map</h3>
+
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14328.852012192852!2d28.02866815096887!3d-26.124597084007696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950cb70efaac55%3A0x52b3b855fed7cda!2sHyde%20Park%2C%20Sandton%2C%202196!5e0!3m2!1sen!2sza!4v1786710448084!5m2!1sen!2sza"
+                    title="Google Maps showing Hyde Park, Sandton" width="100%" height="450" style="border:0;"
+                    allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+            </div>
+        </section>
+
 </main>
 
 <footer style="text-align: center; color: red;">
-    shoutsa
+    <br>
+    Quick links
+    <br>
+    <a href="index.html">Home</a>
+    <br>
+    <a href="about.html">About Us</a>
+    <br>
+    <a href="services.html">Our Work</a>
+    <br>
+    <a href="enquiries.html">Get Involved</a>
+    <br>
+    <a href="contact.html">Contact</a>
+
+    <p>&copy; SHOUT SA. All rights reserved.</p>
+
 </footer>
+
+<script src="script.js/javascript.js"></script>
 </body>
+
+
 
 </html>

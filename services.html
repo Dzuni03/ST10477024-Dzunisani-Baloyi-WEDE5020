@@ -3,15 +3,16 @@
 <html>
 
 <head>
-    <title>Our work</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Our Work</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description"
+        content="Explore SHOUT SA's education and literacy services, including school library support, book donations and initiatives that encourage children to read and learn.">
 </head>
 
 <body style="margin: 0;
 font-family: sans-serif;
 background-color: red">
 
-    <!-- NAVIGATION -->
     <nav style="text-align: center;">
 
         <a href="index.html">
@@ -36,11 +37,10 @@ background-color: red">
 
     </nav>
 
-    <!-- Main container -->
     <div style="width: 85%;
 margin: 40px auto">
         <main>
-            <!-- LITERACY -->
+
             <div style="height: 155px;
 background-color: yellow;
 border: 2px solid white;
@@ -56,7 +56,6 @@ font-size: 20px">
                 fix.
             </div>
 
-            <!-- CHILDREN'S EDUCATION -->
             <div style="height: 165px;
 background-color: yellow;
 border-left: 2px solid white;
@@ -72,7 +71,6 @@ font-size: 20px">
                 escape the poverty life and make something great for themselves and family as well as their community.
             </div>
 
-            <!-- COMMUNITY IMPACT -->
             <div style="height: 155px;
 background-color: yellow;
 border-left: 2px solid white;
@@ -90,10 +88,74 @@ font-size: 20px">
                 The community will change to be a better place with educated children around.
             </div>
     </div>
+
+    <section id="projects-section">
+
+        <h2>Our Literacy Projects</h2>
+
+        <p>
+            Discover how SHOUT SA supports education and literacy
+            in South African communities.
+        </p>
+
+        <input type="text" id="project-search" placeholder="Search literacy projects..."
+            aria-label="Search literacy projects">
+
+        <select id="project-sort" aria-label="Sort literacy projects">
+            <option value="default">Default order</option>
+            <option value="az">Name: A to Z</option>
+            <option value="za">Name: Z to A</option>
+        </select>
+
+        <div id="projects-container" hidden></div>
+
+        <p id="no-projects-message" hidden>
+            No projects match your search.
+        </p>
+
+        <button id="toggle-projects-btn" type="button">
+            Show Literacy Projects
+        </button>
+
+    </section>
+
+    <section id="news-section">
+
+        <h2>News and Updates</h2>
+
+        <p>
+            Keep up with SHOUT SA's education and literacy initiatives.
+        </p>
+
+        <div id="news-container"></div>
+
+        <button id="load-news-btn" type="button">
+            Load News and Updates
+        </button>
+
+    </section>
+
     </main>
+
     <footer style="text-align: center; color: white;">
-        shoutsa
+        <br>
+        Quick links
+        <br>
+        <a href="index.html">Home</a>
+        <br>
+        <a href="about.html">About Us</a>
+        <br>
+        <a href="services.html">Our Work</a>
+        <br>
+        <a href="enquiries.html">Get Involved</a>
+        <br>
+        <a href="contact.html">Contact</a>
+
+        <p>&copy; SHOUT SA. All rights reserved.</p>
+
     </footer>
+
+    <script src="script.js/javascript.js"></script>
 </body>
 
 </html>

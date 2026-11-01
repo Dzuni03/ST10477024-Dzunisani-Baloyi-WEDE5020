@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Donation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body style="margin: 0;
+background-color: yellow;
+font-family: sans-serif">
+    <h2>DONATE TO BE THE BEST THAT HAS HAPPENED TO US</h2>
+    <p>We as SHOUT SA try by all means to build communities and we need the help from you.</p>
+    <p>We use the funds to make schools the best place learners could be at. we build libraries in schools across South
+        Africa.</p>
+
+    <div class="donation-images">
+
+        <picture class="books-picture">
+            <source media="(max-width: 479px)" srcset="books-small.jpg">
+            <source media="(max-width: 1200px)" srcset="books-large.jpg">
+            <img src="books.jpg" alt="Books supporting children's education" loading="lazy">
+        </picture>
+
+        <picture class="library-picture">
+            <source media="(max-width: 479px)" srcset="library-small.jpg">
+            <source media="(max-width: 1200px)" srcset="library-large.jpg">
+            <img src="library.jpg" alt="School library supporting children's education" loading="lazy">
+        </picture>
+
+    </div>
+
+    <div class="donation-form">
+        <form id="donationForm">
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required maxlength="100">
+            <br>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required maxlength="254">
+            <br>
+            <label for="amount">Donation Amount (R):</label>
+            <select id="amount" name="amount" required>
+                <option value="">Choose an amount</option>
+                <option value="50">R50</option>
+                <option value="100">R100</option>
+                <option value="200">R200</option>
+                <option value="500">R500</option>
+                <option value="other">Other amount</option>
+            </select>
+            <br>
+            <div id="otherAmountDiv" hidden>
+                <label for="otherAmount">Enter Amount (R):</label>
+                <input type="number" id="otherAmount" name="otherAmount" min="1" step="0.01">
+            </div>
+            <br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" maxlength="500"></textarea>
+            <br>
+            <button type="submit">Continue to Donate</button>
+
+            <p id="donationMessage" role="status"></p>
+        </form>
+    </div>
+
+    <footer style="text-align: center; color: white;">
+        <p>&copy; SHOUT SA. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js/javascript.js"></script>
+</body>
+
+</html>
